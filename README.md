@@ -1,5 +1,5 @@
 # Scratch ML: An ML framework from scratch
-![logo]scratchml.jpeg
+![logo](scratchml.jpeg)
 Machine Learning and Deep Learning framework developed from scratch in Python.
 
 ## Getting started
