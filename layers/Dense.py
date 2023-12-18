@@ -5,6 +5,7 @@ class Dense:
     def __init__(self, n_inputs, n_neurons):
         self.weights = np.random.randn(n_inputs, n_neurons)
         self.bias = np.zeros((1, n_neurons))
+        self.trainable = True
 
     def forward(self, inputs):
         self.inputs = inputs
