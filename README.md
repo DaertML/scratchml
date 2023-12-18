@@ -1,4 +1,5 @@
-# Scratch ML: Looking for an AI/ML framework written from scratch?
+# Scratch ML: An ML framework from scratch
+![logo]scratchml.jpeg
 Machine Learning and Deep Learning framework developed from scratch in Python.
 
 ## Getting started
