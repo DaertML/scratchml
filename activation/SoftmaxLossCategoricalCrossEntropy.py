@@ -8,6 +8,7 @@ class SoftmaxLossCategoricalCrossEntropy():
     def __init__(self):
         self.activation = Softmax()
         self.loss = CategoricalCrossEntropy()
+        self.trainable = False
 
     def forward(self, inputs, y_true):
         self.activation.forward(inputs)

@@ -1,6 +1,8 @@
 import numpy as np
 
 class Sigmoid():
+    def __init__(self):
+        self.trainable = False
     def forward(self, inputs):
         self.inputs = inputs
         self.inputs = np.clip(inputs, -500, 500)

@@ -2,8 +2,8 @@ import numpy as np
 #from scipy.stats import norm
 
 def Gelu():
-    def __init__():
-        pass
+    def __init__(self):
+        self.trainable = False
 
     def forward(self, inputs):
         self.inputs = inputs

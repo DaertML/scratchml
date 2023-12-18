@@ -1,8 +1,8 @@
 import numpy as np
 
 class Softplus():
-    def __init__():
-        pass
+    def __init__(self):
+        self.trainable = False
 
     def forward(self, inputs):
         self.inputs = inputs

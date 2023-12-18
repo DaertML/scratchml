@@ -2,7 +2,7 @@ import numpy as np
 
 class Softmax:
     def __init__(self):
-        pass
+        self.trainable = False
 
     def forward(self, inputs):
         #E = 2.71828182846

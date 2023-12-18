@@ -1,6 +1,9 @@
 import numpy as np
 
 class Tanh():
+    def __init__(self):
+        self.trainable = False
+        
     def forward(self, inputs):
         self.inputs = inputs
         # This causes overflows, use log-sum-exp instead

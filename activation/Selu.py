@@ -4,8 +4,8 @@ lambda_ = 1.0507
 alpha = 1.67326
 
 class Selu():
-    def __init__():
-        pass
+    def __init__(self):
+        self.trainable = False
 
     def forward(self, inputs):
         self.inputs = inputs
