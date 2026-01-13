@@ -1,0 +1,104 @@
+services:
+  claude-lab-1:
+    build: .
+    container_name: claude-ai-1
+    command: bash -c "git config --global core.sshCommand 'false' && git config --global url.'https://'.insteadOf 'git@github.com:' && cd /project && exec bash"
+    volumes:
+      - ./shared-project:/project
+      - ~/.claude:/root/.claude
+      - ~/.claude-code-router:/root/.claude-code-router
+    environment:
+      - ANTHROPIC_BASE_URL=http://0.0.0.0:8080
+      - ANTHROPIC_AUTH_TOKEN=dummy-key
+      - CLAUDE_CODE_DISABLE_EXPERIMENTAL_BETAS=1
+      - CLAUDE_CODE_DISABLE_EXTENDED_THINKING=1
+      - CLAUDE_CODE_SKIP_ONBOARDING=1
+      - CLAUDE_CODE_AUTO_APPROVE=1
+      - INSTANCE_ID=1
+      - GIT_SSH_COMMAND=false
+      - TERM=xterm-256color
+      - TIMEOUT=300
+      - MAX_CONSECUTIVE_FAILURES=5
+    stdin_open: true
+    tty: true
+    network_mode: host
+    working_dir: /project
+    restart: unless-stopped
+
+  claude-lab-2:
+    build: .
+    container_name: claude-ai-2
+    command: bash -c "git config --global core.sshCommand 'false' && git config --global url.'https://'.insteadOf 'git@github.com:' && cd /project && exec bash"
+    volumes:
+      - ./shared-project:/project
+      - ~/.claude:/root/.claude
+      - ~/.claude-code-router:/root/.claude-code-router
+    environment:
+      - ANTHROPIC_BASE_URL=http://0.0.0.0:8080
+      - ANTHROPIC_AUTH_TOKEN=dummy-key
+      - CLAUDE_CODE_DISABLE_EXPERIMENTAL_BETAS=1
+      - CLAUDE_CODE_DISABLE_EXTENDED_THINKING=1
+      - CLAUDE_CODE_SKIP_ONBOARDING=1
+      - CLAUDE_CODE_AUTO_APPROVE=1
+      - INSTANCE_ID=2
+      - GIT_SSH_COMMAND=false
+      - TERM=xterm-256color
+      - TIMEOUT=300
+      - MAX_CONSECUTIVE_FAILURES=5
+    stdin_open: true
+    tty: true
+    network_mode: host
+    working_dir: /project
+    restart: unless-stopped
+
+  claude-lab-3:
+    build: .
+    container_name: claude-ai-3
+    command: bash -c "git config --global core.sshCommand 'false' && git config --global url.'https://'.insteadOf 'git@github.com:' && cd /project && exec bash"
+    volumes:
+      - ./shared-project:/project
+      - ~/.claude:/root/.claude
+      - ~/.claude-code-router:/root/.claude-code-router
+    environment:
+      - ANTHROPIC_BASE_URL=http://0.0.0.0:8080
+      - ANTHROPIC_AUTH_TOKEN=dummy-key
+      - CLAUDE_CODE_DISABLE_EXPERIMENTAL_BETAS=1
+      - CLAUDE_CODE_DISABLE_EXTENDED_THINKING=1
+      - CLAUDE_CODE_SKIP_ONBOARDING=1
+      - CLAUDE_CODE_AUTO_APPROVE=1
+      - INSTANCE_ID=3
+      - GIT_SSH_COMMAND=false
+      - TERM=xterm-256color
+      - TIMEOUT=300
+      - MAX_CONSECUTIVE_FAILURES=5
+    stdin_open: true
+    tty: true
+    network_mode: host
+    working_dir: /project
+    restart: unless-stopped
+
+  claude-lab-4:
+    build: .
+    container_name: claude-ai-4
+    command: bash -c "git config --global core.sshCommand 'false' && git config --global url.'https://'.insteadOf 'git@github.com:' && cd /project && exec bash"
+    volumes:
+      - ./shared-project:/project
+      - ~/.claude:/root/.claude
+      - ~/.claude-code-router:/root/.claude-code-router
+    environment:
+      - ANTHROPIC_BASE_URL=http://0.0.0.0:8080
+      - ANTHROPIC_AUTH_TOKEN=dummy-key
+      - CLAUDE_CODE_DISABLE_EXPERIMENTAL_BETAS=1
+      - CLAUDE_CODE_DISABLE_EXTENDED_THINKING=1
+      - CLAUDE_CODE_SKIP_ONBOARDING=1
+      - CLAUDE_CODE_AUTO_APPROVE=1
+      - INSTANCE_ID=4
+      - GIT_SSH_COMMAND=false
+      - TERM=xterm-256color
+      - TIMEOUT=300
+      - MAX_CONSECUTIVE_FAILURES=5
+    stdin_open: true
+    tty: true
+    network_mode: host
+    working_dir: /project
+    restart: unless-stopped
